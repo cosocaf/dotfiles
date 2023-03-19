@@ -1,3 +1,8 @@
+wget https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
+source ./fisher.fish
+fisher install jorgebucaran/fisher
+chsh -s (which fish)
+
 # install libs and tools
 sudo apt install             \
   build-essential            \

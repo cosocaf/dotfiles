@@ -12,9 +12,6 @@ sudo apt install curl git wget
 
 # install fish
 sudo apt install fish
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-chsh -s $(which fish)
-
 fish ../ubuntu-setup.fish
 
 cd ..
