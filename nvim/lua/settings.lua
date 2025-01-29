@@ -1,13 +1,14 @@
 -- Appearance
-vim.opt.termguicolors = true
-vim.opt.title         = true
-vim.opt.number        = true
-vim.opt.wrap          = false
-vim.opt.showmatch     = true
-vim.opt.matchtime     = 1
-vim.opt.list          = true
-vim.opt.listchars     = { tab = "»-", trail = "-", extends = "»", precedes = "«", nbsp = "%", eol = "↲" }
-vim.opt.laststatus    = 3
+vim.opt.termguicolors  = true
+vim.opt.title          = true
+vim.opt.number         = true
+vim.opt.relativenumber = true
+vim.opt.wrap           = false
+vim.opt.showmatch      = true
+vim.opt.matchtime      = 1
+vim.opt.list           = true
+vim.opt.listchars      = { space = "·", tab = "»-", trail = "-", extends = "»", precedes = "«", nbsp = "%", eol = "↲" }
+vim.opt.laststatus     = 3
 
 -- Search
 vim.opt.ignorecase = true
@@ -39,6 +40,17 @@ vim.opt.viminfo     = ""
 vim.opt.clipboard:append { "unnamed" }
 
 -- Terminal
-if vim.fn.has("windows") then
-  vim.opt.shell = "pwsh"
+if vim.fn.has("win64") then
+  -- vim.opt.shell = "pwsh"
 end
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+  callback = function()
+    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local lcount = vim.api.nvim_buf_line_count(0)
+    if mark[1] > 0 and mark[1] <= lcount then
+      vim.api.nvim_win_set_cursor(0, { mark[1], mark[2] })
+    end
+  end,
+})
+
