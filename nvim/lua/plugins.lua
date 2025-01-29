@@ -346,9 +346,7 @@ return {
       mason_lspconfig.setup {
         ensure_installed = {
           "lua_ls",
-          "phpstan",
           "intelephense",
-          "php-cs-fixer",
         },
       }
     end,
