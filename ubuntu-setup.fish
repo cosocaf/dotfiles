@@ -42,6 +42,10 @@ sudo mv nvim.appimage /usr/local/bin
 sudo ln -s /usr/local/bin/nvim.appimage /usr/local/bin/nvim
 ln -s (realpath ../nvim) ~/.config/nvim
 
+# install tmux
+sudo apt install tmux
+ln -s (realpath ../tmux) ~/.config/tmux
+
 rm ~/.config/fish/config.fish
 ln -s (realpath ../fish/config.fish) ~/.config/fish/config.fish
 
