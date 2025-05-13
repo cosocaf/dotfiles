@@ -107,6 +107,13 @@ return {
         default_file_explorer = true,
         columns = { "icon", "permissions", "size", "mtime" },
         delete_to_trash = true,
+        view_options = {
+          show_hidden = true,
+          natural_order = true,
+          is_always_hidden = function(name, _)
+            return name == '..' or name == ".git"
+          end
+        },
       }
 
       vim.api.nvim_create_augroup("OilRelPathFix", {})
