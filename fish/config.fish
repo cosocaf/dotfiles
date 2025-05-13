@@ -20,6 +20,8 @@ set __fish_git_prompt_char_invalidstate '✖ '
 set __fish_git_prompt_char_stagedstate '⚫︎'
 set __fish_git_prompt_char_stashstate '⚑ '
 
+set -U FZF_LEGACY_KEYBINDINGS 0
+
 set -x PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION python
 
 set PYENV_ROOT ~/.pyenv
