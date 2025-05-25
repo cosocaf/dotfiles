@@ -53,8 +53,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 # fish config
 rm ~/.config/fish/config.fish
-rm ~/.config/fish/fish_prompt.fish
-rm ~/.config/fish/fish_right_prompt.fish
+rm ~/.config/fish/functions/fish_prompt.fish
+rm ~/.config/fish/functions/fish_right_prompt.fish
 ln -s (realpath ../fish/config.fish) ~/.config/fish/config.fish
 ln -s (realpath ../fish/functions/fish_prompt.fish) ~/.config/fish/functions/fish_prompt.fish
 ln -s (realpath ../fish/functions/fish_right_prompt.fish) ~/.config/fish/functions/fish_right_prompt.fish
