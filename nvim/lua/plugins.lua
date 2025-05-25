@@ -304,12 +304,14 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    version = "^1.0.0",
     config = function()
       require("mason").setup()
     end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    version = "^1.0.0",
     event = "BufEnter",
     dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
     config = function()
@@ -417,6 +419,10 @@ return {
 
       vim.keymap.set("n", "<leader>fr", ":Telescope frecency workspace=CWD<CR>", { desc = "Telescope Frecency" })
     end,
+  },
+  {
+    "github/copilot.vim",
+    event = "InsertEnter",
   },
   {
     "folke/todo-comments.nvim",
