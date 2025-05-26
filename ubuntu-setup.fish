@@ -16,6 +16,8 @@ sudo apt install             \
   libopencv-dev              \
   tk-dev                     \
   wget                       \
+  zip                        \
+  unzip                      \
   apt-transport-https
 
 # install powerline fonts
